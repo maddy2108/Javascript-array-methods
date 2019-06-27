@@ -56,7 +56,6 @@ function mapSum(data) {
 
 console.log(mapSum(names));
 
-
 function FilterSum(data) {
     var newArr = data.filter(function (value, index, array) {
         return value.indexOf('j') > -1 ? value : null;
