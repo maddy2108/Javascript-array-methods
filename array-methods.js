@@ -65,6 +65,98 @@ function FilterSum(data) {
 
 console.log(FilterSum(names));
 
+let numbers=[2,5,1,3,10];
+let sortedArray=numbers.sort((a,b)=>{
+return a-b;
+})
+
+console.log(sortedArray)
+
+let namesArray = ["jayanth", "madhav", "smita", "jyoti"];
+
+let sortednameArray=namesArray.sort();
+console.log(sortednameArray);
+
+//Question
+//value should comes two time only
+//output[1,1,2,2,5,5]
+let numArr=[1,1,1,1,2,2,5,5,5,5]
+let empArr=[]
+numArr.filter(function(val){
+if(empArr.indexOf(val)>-1){
+    return false;
+}
+else{
+    empArr.push(val);
+}
+})
+
+
+console.log(empArr);
+let conArr=empArr.concat(empArr);
+console.log(conArr);
+
+console.log(conArr.sort());
+
+
+//to do sum
+let sumred=numArr.reduce((acc,val)=> acc+val);
+
+console.log(sumred);
+
+//to find the max value
+let maxred=numArr.reduce((acc,val)=> acc>val?acc:val);
+
+console.log(maxred);
+
+//output=jayanthjyothimadhavsmita
+let namedcatred=namesArray.reduce((acc,val)=> acc+val);
+console.log(namedcatred);
+//out=jayanth-jyothi-madhav-smita
+let namedcatred1=namesArray.reduce((acc,val)=> `${acc}-${val}`);
+console.log(namedcatred1);
+
+//input numbers=[2,5,1,3,10];
+//out=[1, 2, 3]
+//it will not effort the numbers array
+console.log(numbers.slice(0,3))
+console.log(numbers);
+
+
+//getting the last value
+//it will effort the array
+console.log(numbers.pop())
+console.log(numbers)
+console.log(numbers.push(10))
+console.log(numbers)
+
+//the lenght of the array same when we are using delete function on Array
+//output=[empty, 2, 3, 5, 10]
+// console.log(delete numbers[0]);
+// console.log(numbers);
+
+
+//adding and removeing from start in Array
+console.log(numbers.shift());
+console.log(numbers);
+console.log(numbers.unshift(1));
+console.log(numbers);
+
+
+//it will delete the mid value and add the values
+console.log(numbers.splice((numbers.length)/2,1));
+console.log("outputSplice= "+ numbers);
+
+
+
+
+
+
+
+
+
+
+
 
 
 
