@@ -316,40 +316,40 @@ console.log(sqfun(sqarr1));
 console.log(sqfun(sqarr2));
 console.log("-------------------------------End of task 11th------------------------------------------------------");
 
-/**
- * Returns every second item from the specified array:
- * 
- * Example :
- * [ 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 ] => [ 2, 4, 6, 8, 10 ]
- * [ 'a', 'b', 'c' , null ]  => [ "b", null ]
- * [ "a" ] => []
+// /**
+//  * Returns every second item from the specified array:
+//  * 
+//  * Example :
+//  * [ 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 ] => [ 2, 4, 6, 8, 10 ]
+//  * [ 'a', 'b', 'c' , null ]  => [ "b", null ]
+//  * [ "a" ] => []
  
-function getSecondItems(arr) {
-    throw new Error('Not implemented');
-}
-*/
-let secarr1=[1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
-let secarr2=['a', 'b', 'c' , null];
-let secarr3=["a"]
+// function getSecondItems(arr) {
+//     throw new Error('Not implemented');
+// }
+// */
+// let secarr1=[1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+// let secarr2=['a', 'b', 'c' , null];
+// let secarr3=["a"]
 
-let secfun=()=>{
-let arr2=[];
-let count=0;
-for (let index = 1; index < arr.length; index+2){
-          arr2[count]=arr[index];
-          count++;
-   }
-   return arr2;
+// let secfun=()=>{
+// let arr2=[];
+// let count=0;
+// for (let index = 1; index < arr.length; index+2){
+//           arr2[count]=arr[index];
+//           count++;
+//    }
+//    return arr2;
 
-}
+// }
 
-console.log(secfun(secarr1));
-console.log(secfun(secarr2));
-console.log(secfun(secarr3));
+// console.log(secfun(secarr1));
+// console.log(secfun(secarr2));
+// console.log(secfun(secarr3));
 
 
 
-console.log("-------------------------------End of task 12th------------------------------------------------------");
+// console.log("-------------------------------End of task 12th------------------------------------------------------");
 
 
 
@@ -362,12 +362,35 @@ console.log("-------------------------------End of task 12th--------------------
  *   [ 1, 2, 3 ] => [ 3, 2, 1 ]
  *   [ 1,2,3,4,5,6,7,8,9,10 ] => [ 10, 9, 8 ]
  *   [ 10, 10, 10, 10 ] => [ 10, 10, 10 ]
- */
+ 
 function get3TopItems(arr) {
     throw new Error('Not implemented');
 }
+*/
+let lararr=[];
+let lararr1=[1,2];
+let lararr2=[1,2,3];
+let lararr3=[1,2,3,4,5,6,7,8,9,10];
+let lararr4=[10,10,10,10];
+
+let get3TopItems=(arr)=>{
+    let arr3=[];
+    let arr2=arr.reverse();
+    for(let i=0;i<3;i++){
+        arr3[i]=arr2[i];
+    }
+  return arr3;
+}
+
+console.log(get3TopItems(lararr));
+console.log(get3TopItems(lararr1));
+console.log(get3TopItems(lararr2));
+console.log(get3TopItems(lararr3));
+console.log(get3TopItems(lararr4));
 
 
+
+console.log("-------------------------------End of task 13th------------------------------------------------------");
 
 
 /**  
@@ -379,12 +402,35 @@ function get3TopItems(arr) {
  *   [ 1, 2, 3]   => 3
  *   [ null, 1, 'elephant' ] => 1
  *   [ 1, '2' ] => 1
- */
+ *
 function getPositivesCount(arr) {
     throw new Error('Not implemented');
 }
+*/
 
+let poscount1=[];
+let poscount2=[-1, 0, 1];
+let poscount3=[1, 2, 3];
+let poscount4=[null, 1, 'elephant'];
+let poscount5=[1, '2'];
 
+let poscoutfun=(arr)=>{
+    let count=0;
+    for (val of arr) {
+        if(val>0 && typeof val=="number"){
+            count++;
+        }
+        
+    }
+    return count;
+}
+
+console.log(poscoutfun(poscount1));
+console.log(poscoutfun(poscount2));
+console.log(poscoutfun(poscount3));
+console.log(poscoutfun(poscount4));
+console.log(poscoutfun(poscount5));
+console.log("-------------------------------End of task 14th------------------------------------------------------");
 /** 
  * Sorts digit names
  * 
@@ -398,7 +444,7 @@ function getPositivesCount(arr) {
 function sortDigitNamesByNumericOrder(arr) {
     throw new Error('Not implemented');
 }
-
+console.log("-------------------------------End of task 15th------------------------------------------------------");
 
 /** 
  * Returns the sum of all items in the specified array of numbers
@@ -408,11 +454,26 @@ function sortDigitNamesByNumericOrder(arr) {
  *   [ 1, 2, 3 ]           => 6
  *   [ -1, 1, -1, 1 ]      => 0
  *   [ 1, 10, 100, 1000 ]  => 1111
- */
+ 
 function getItemsSum(arr) {
     throw new Error('Not implemented');
 }
+*/
+let sumarr1=[1, 2, 3];
+let sumarr2=[-1, 1, -1, 1];
+let sumarr3=[1, 10, 100, 1000];
 
+let sumfun=(arr)=>{
+    let ans=0;
+    arr.forEach(element => {
+        ans=element+ans;
+    });
+   return ans;
+}
+console.log(sumfun(sumarr1));
+console.log(sumfun(sumarr2));
+console.log(sumfun(sumarr3));
+console.log("-------------------------------End of task 16th------------------------------------------------------");
 
 /** 
  * Returns the number of all falsy value in the specified array
@@ -422,12 +483,32 @@ function getItemsSum(arr) {
  *  [ 1, '', 3 ] => 1
  *  [ -1, 'false', null, 0 ] => 2
  *  [ null, undefined, NaN, false, 0, '' ]  => 6
- */
+ *
 function getFalsyValuesCount(arr) {
     throw new Error('Not implemented');
 }
+*/
+let falsyarr1=[];
+let falsyarr2=[ 1, '', 3 ];
+let falsyarr3=[ -1, 'false', null, 0 ];
+let falsyarr4=[ null, undefined, NaN, false, 0, '' ];
+let falsyfun=(arr)=>{
+    let count=0;
+    for (val of arr) {
+        if(!val){
+            count++;
+        }
+        
+    }
+    return count;
 
+}
 
+console.log(falsyfun(falsyarr1));
+console.log(falsyfun(falsyarr2));
+console.log(falsyfun(falsyarr3));
+console.log(falsyfun(falsyarr4));
+console.log("-------------------------------End of task 17th------------------------------------------------------");
 /**
  * Returns a number of all occurences of the specified item in an array  
  * 
@@ -437,11 +518,34 @@ function getFalsyValuesCount(arr) {
  *    [ 'a','b','c','c' ], 'c'=> 2
  *    [ null, undefined, null ], null => 2 
  *    [ true, 0, 1, 'true' ], true => 1
- */
+ *
 function findAllOccurences(arr, item) {
     throw new Error('Not implemented');
 }
+*/
 
+let occarr1=[0, 0, 1, 1, 1, 2];
+let occarr2=[ 1, 2, 3, 4, 5 ];
+let occarr3=[ 'a','b','c','c' ];
+let occarr4=[ null, undefined, null ];
+let occarr5=[ true, 0, 1, 'true' ];
+
+let occfun=(arr,el)=>{
+    let count=0;
+    for (val of arr) {
+        if(val==el){
+            count++;
+        }
+    }
+    return count;
+}
+
+console.log(occfun(occarr1,1));
+console.log(occfun(occarr2,0));
+console.log(occfun(occarr3,'c'));
+console.log(occfun(occarr4,null));
+console.log(occfun(occarr5,true));
+console.log("-------------------------------End of task 18th------------------------------------------------------");
 
 /**
  * Concatenates all elements from specified array into single string with ',' delimeter  
@@ -450,13 +554,24 @@ function findAllOccurences(arr, item) {
  *    [0, false, 'cat', NaN, true, '']  => '0,false,cat,NaN,true,'
  *    [1, 2, 3, 4, 5]                   => '1,2,3,4,5'
  *    ['rock', 'paper', 'scissors']     => 'rock,paper,scissors'
- */
+ *
 function toStringList(arr) {
     throw new Error('Not implemented');
 }
+*/
+let contarr1=[0, false, 'cat', NaN, true, ''];
+let contarr2=[1, 2, 3, 4, 5];
+let contarr3=['rock', 'paper', 'scissors'];
+let contfun=(arr)=>{
+  
+  return data=arr.join(",");
+}
 
+console.log(contfun(contarr1));
+console.log(contfun(contarr2));
+console.log(contfun(contarr3));
 
-
+console.log("-------------------------------End of task 19th------------------------------------------------------");
 
 /**
  * Sorts the specified array by country name first and city name
@@ -479,16 +594,42 @@ function toStringList(arr) {
  *      { country: 'Poland',  city: 'Warsaw' },
  *      { country: 'Russia',  city: 'Moscow' },
  *      { country: 'Russia',  city: 'Saint Petersburg' }
- */
+ *
 function sortCitiesArray(arr) {
     throw new Error('Not implemented');
 }
+*/
+let sortarr=[
+          { country: 'Russia',  city: 'Moscow' },
+          { country: 'Belarus', city: 'Minsk' },
+          { country: 'Poland',  city: 'Warsaw' },
+          { country: 'Russia',  city: 'Saint Petersburg' },
+         { country: 'Poland',  city: 'Krakow' },
+         { country: 'Belarus', city: 'Brest' }
+       ] ;
 
+let sortfun=(arr)=>{
+      
+    arr.sort(function(a,b){
+        let name1=a.country.toUpperCase;
+        let name2=b.country.toUpperCase;
+        if(name1>name2){
+            return 1;
+        }
+        else if(name1<name2){
+            return -1;
+        }
+        else{
+            return 0;
+        }
 
+    });
+    return arr;
+}
 
+console.log(sortfun(sortarr));
 
-
-
+console.log("-------------------------------End of task 20th------------------------------------------------------");
 /**
  * Creates an array of integers from the specified start to end (inclusive)
  * 
@@ -497,12 +638,27 @@ function sortCitiesArray(arr) {
  *    -2, 2  => [ -2, -1, 0, 1, 2 ]
  *     0, 100 => [ 0, 1, 2, ..., 100 ]
  *     3, 3   => [ 3 ]
- */
+ *
 function getIntervalArray(start, end) {
     throw new Error('Not implemented');
 }
+*/
+let getIntervalArray=(start,end)=>{
+    let arr2=[];
+    let len=end-start;
+    for (let index = 0; index <=len; index++) {
+          arr2[index]=start;
+          start++;
+        }
+        return arr2;
 
+}
 
+console.log(getIntervalArray(1,5));
+console.log(getIntervalArray(-2,2));
+console.log(getIntervalArray(0,100));
+console.log(getIntervalArray(3,3));
+console.log("-------------------------------End of task 21th------------------------------------------------------");
 /**
  * Returns array containing only unique values from the specified array.
  *
@@ -510,7 +666,24 @@ function getIntervalArray(start, end) {
  *   [ 1, 2, 3, 3, 2, 1 ] => [ 1, 2, 3 ]
  *   [ 'a', 'a', 'a', 'a' ]  => [ 'a' ]
  *   [ 1, 1, 2, 2, 3, 3, 4, 4] => [ 1, 2, 3, 4]
- */
+ 
 function distinct(arr) {
     throw new Error('Not implemented');
 }
+*/
+
+let disarr1=[1, 2, 3, 3, 2, 1];
+let disarr2=['a', 'a', 'a', 'a'];
+let disarr3=[1, 1, 2, 2, 3, 3, 4, 4];
+
+let disfun=(arr)=>{
+    return arr2=[...new Set(arr)]
+
+}
+
+console.log(disfun(disarr1));
+console.log(disfun(disarr2));
+console.log(disfun(disarr3));
+
+
+console.log("-------------------------------End of task 22th------------------------------------------------------");
