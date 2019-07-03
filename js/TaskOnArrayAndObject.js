@@ -627,6 +627,13 @@ let sortfun=(arr)=>{
     return arr;
 }
 
+function sortArray(){
+    sortarr.sort((a, b) => a.country.localeCompare(b.country) || a.city.localeCompare(b.city));
+    console.log(sortarr);
+}
+
+sortArray();
+
 console.log(sortfun(sortarr));
 
 console.log("-------------------------------End of task 20th------------------------------------------------------");

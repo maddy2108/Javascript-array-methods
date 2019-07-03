@@ -40,6 +40,12 @@ fetch('https://jsonplaceholder.typicode.com/photos')
 
 //console.log(obj.hasOwnProperty('sdfd'));
 
+function add(a,b){
+    return a+b
+}
+
+add(2,3)
+
 
 
 
