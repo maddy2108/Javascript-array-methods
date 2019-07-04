@@ -47,7 +47,7 @@ console.log(utils.sub(5,3));
 
 console.log(JSON.parse(localStorage.getItem('details')).name);
 console.log(JSON.parse(sessionStorage.getItem('details')).name);
-sessionStorage.removeItem('details')
+sessionStorage.removeItem('details');
 
 
 

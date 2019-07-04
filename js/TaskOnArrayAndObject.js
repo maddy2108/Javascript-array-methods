@@ -164,7 +164,9 @@ removefun = (arr) => {
     let arr2 = [];
     let count = 0;
     for (let i = 0; i < arr.length; i++) {
-
+         
+        console.log(!Number.isNaN(arr[i]));
+        console.log(arr[i].isNaN());
 
         if (arr[i] != 0 && arr[i] != false && arr[i] != null && arr[i] != "" && typeof arr[i] != undefined && !Number.isNaN(arr[i])) {
             arr2[count] = arr[i];
@@ -172,6 +174,7 @@ removefun = (arr) => {
         }
     }
     return arr2;
+
 }
 
 console.log(removefun(removearr));
