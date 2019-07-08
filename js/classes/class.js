@@ -72,6 +72,7 @@ var counter = 0;
 var myTime = setInterval(function () {
     document.getElementById('timer').innerHTML = counter++
 }, 1000);
+
 function stopTimer(){
     clearInterval(myTime);
 }
